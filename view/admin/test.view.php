@@ -35,11 +35,22 @@
                         $sql = "SELECT name FROM Tests";
                         $result = $conn->query($sql);
                         while($row = $result->fetch_assoc()){
-                            echo "<div class='card d-flex align-items-center' ><div class='card-body '><h5 class='card-title'>".$row['name']."</h5><p class='card-text'></p><a href='#' class='btn btn-primary float-end '>Show</a></div></div>";    
+                            echo "<div class='card m-5'><div class='card-body inline-block'><h1 class='card-title '>".$row['name']."</h1><button href='#' class='btn btn-primary m-5 float-end'><h5>Show</h5></button></div></div>";    
+                           
                         }
                         $conn->close();
                     ?>
-                
+                        <!-- <div class="card">
+                            <div class="card-header">
+                                Test name
+                            </div>
+                            <div class="container">
+                                <div class="card-body">
+                                    <h5 class="card-title">Special title treatment</h5>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div> -->
               
     </div>
 </body>

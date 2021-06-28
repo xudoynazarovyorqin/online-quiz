@@ -20,16 +20,23 @@
                 $user = $row;
                  
              }
-             var_dump($user);
+            //  var_dump($user);
         ?>
-        
-
-     
+        <div class="vertical-center text-center">
+                <div class="card ">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Username</b>: <?= $user['username'] ?></h5>
+                        <h5 class="card-title"><b>Subject</b>: <?= $user['subject'] ?></h5>
+                        <h4 class="card-title" style="color: green">Result: <p><?= $user['result'] ?></p></h4>
+                      
+                    </div>
+                </div>
              <form action="/">
-            <div class="text-center">
-                <button class="btn btn-success mb-5 mr-5" type="submit" ><h4>Home</h4></button>
-            </div>
+                <div class="text-center mt-3">
+                    <button class="btn btn-success mb-5 mr-5" type="submit" ><h5>Home</h5></button>
+                </div>
              </form>
+        </div>
         </form>
 </body>
 </html> 
