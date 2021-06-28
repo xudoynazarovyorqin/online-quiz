@@ -23,6 +23,7 @@
     <div class="text-center pt-3 text-blue">
             <h3 style="color:#0d6efd; font-family:sans-serif">Create Test</h3>
         </div>
+    
         <form action="../../../controllers/admin/test/add-test.php" method="post">
         <div class="form-group">
             <input type="text" name="question" class="form-control " placeholder="Question">
@@ -41,17 +42,16 @@
             </div>
             <div class="form-group d-flex align-items-center">
                 <input type="radio" name="true" value="4">
-                <input type="hidden" name="table" value="<?=$_REQUEST['subject']?>">
                 <input type="text" name="answer4" class="form-control" placeholder="answer 4" >
             </div>
+                <input type="hidden" name="subject" value="<?=$_REQUEST['subject']?>">
+                
             <div class="text-center">
-                <button class="btn btn-primary " name="subject" >NEXT</button>
+                <button class="btn btn-primary " >Add Question</button>
             </div>
         </div>
         </form>
-        <form action="../../../view/admin/test.view.php" method="get">
-            <button class="btn btn-success m-5 float-end"  type="submit">Complate Test</button>
-        </form>
+        
     </div>
 </body>
 </html> 

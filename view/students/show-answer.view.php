@@ -11,13 +11,18 @@
 <body>
 
         <?php 
+             $user  ;   
              $conn = mysqli_connect("localhost", "root", "root", "laravel");
              $sql = "SELECT * FROM student_result";
              $result = $conn->query($sql);
              while($row = $result->fetch_assoc()){
-                 var_dump($row);
+                 
+                $user = $row;
+                 
              }
+             var_dump($user);
         ?>
+        
 
      
              <form action="/">

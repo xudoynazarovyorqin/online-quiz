@@ -19,16 +19,17 @@ class Student
         // foreach( $_REQUEST['old'] as $key => $val)
         // {
             // var_dump($_REQUEST);
+            $subject = $_REQUEST['subject'];
         // } 
-        $conn = mysqli_connect("localhost", "root", "root", "laravel");
+        $conn = new mysqli("localhost", "root", "root", "laravel");
         
         $true = 0;
         $count = 0;
         foreach($_REQUEST as $key => $val){
             if(is_numeric($key)){
-                // var_dump($key);
-                $sql = "SELECT id, true_answer FROM Matematika WHERE id=$key";
+                $sql = "SELECT id, true_answer FROM $subject WHERE id=$key";
                 $result = $conn->query($sql);
+                // var_dump($result);
                 while($row = $result->fetch_assoc()) {
                     if($row['true_answer']==$val){
                         $true++;

@@ -17,11 +17,11 @@
             $conn = mysqli_connect("localhost", "root", "root", "laravel");
             $sql = "SELECT * FROM $table";
             $result = $conn->query($sql);
-            var_dump($_REQUEST);
+           
             // $subject = $_REQUEST['test'];
             $username = $_REQUEST['user_name'];?>
             <form action="../../controllers/students/answer.php" method="post">
-            <input type="text" name="username" value="<?=$username?>">
+            <input type="hidden" name="username" value="<?=$username?>">
             <?php while($row = $result->fetch_assoc()) : ?>
                 <div class="p-5 text-center">
                     <h2 class="p-3 "><?= $row['question']?></h2><br>
@@ -44,7 +44,6 @@
                     
                 </div>
                 
-                <!-- <?php var_dump($row); ?> -->
             <?php endwhile;
             $conn->close();
 

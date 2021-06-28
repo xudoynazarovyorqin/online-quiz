@@ -35,7 +35,7 @@
                         $sql = "SELECT name FROM Tests";
                         $result = $conn->query($sql);
                         while($row = $result->fetch_assoc()){
-                            echo "<div class='card d-flex align-items-center' ><div class='card-body '><h5 class='card-title'>".$row['name']."</h5><p class='card-text'>Some quick example text to build on the card title and make up the bulk of the card's content.</p><a href='#' class='btn btn-primary float-end '>Show</a></div></div>";    
+                            echo "<div class='card d-flex align-items-center' ><div class='card-body '><h5 class='card-title'>".$row['name']."</h5><p class='card-text'></p><a href='#' class='btn btn-primary float-end '>Show</a></div></div>";    
                         }
                         $conn->close();
                     ?>

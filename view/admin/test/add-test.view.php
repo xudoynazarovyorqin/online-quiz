@@ -23,7 +23,7 @@
         <div class="text-center pt-3 text-blue">
             <h3 style="color:#0d6efd; font-family:sans-serif">Add Test</h3>
         </div>
-        <form action="../../../controllers/admin/test/create-test.php" method="Post">
+        <form action="../../../view/admin/test/create-test.view.php" method="Post">
 
             <div class="form-group">
                 <select name="subject" class="form-select" >
