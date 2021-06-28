@@ -21,42 +21,42 @@
     </div>
     <div style="margin-left:250px">
         <div class="text-center pt-3 text-blue">
-            <h3 style="color:#0d6efd; font-family:sans-serif">Tests</h3>
+            <h3 style="color:#0d6efd; font-family:sans-serif"><?= $_REQUEST['name_subject'] ?></h3>
         </div>
-        <form action="/view/admin/test/add-test.view.php" method="get">
-        <button type="submit" class="btn btn-primary m-2 pb-0">
-            <p >Add Test</p>
-        </button>
-        </form>
+        
         
     
                     <?php
+                    // var_dump($_REQUEST);
+                        $table = $_REQUEST['name_subject'];
                         $conn = mysqli_connect("localhost", "root", "root", "laravel");
-                        $sql = "SELECT name FROM Tests";
+                        $sql = "SELECT * FROM $table";
                         $result = $conn->query($sql);
-                        while($row = $result->fetch_assoc()){
-                            // echo "<div class='card m-5'><div class='card-body inline-block'><h1 class='card-title '>".$row['name']."</h1><button href='#' class='btn btn-primary m-5 float-end'><h5>Show</h5></button></div></div>";    
-                           
-                      echo "<div class='card m-5'>
-                            <div class='card-header'>
-                                Test name
-                            </div>
-                            <div class='container'>
-                                <div class='card-body'>
-                                    <form action='./show-test.view.php' method='post'>
-                                    <input type='hidden' name='name_subject' value=".$row['name'].">
-                                    
-                                    <h5 class='card-title'>".$row['name']."</h5>
-                                    <button  class='btn btn-primary'>Show test</button>
-
-                                    </form>
+                        while($row = $result->fetch_assoc()): ?>
+                            <div class="p-5 text-center">
+                                <h2 class="p-3 "><?= $row['question']?></h2><br>
+                                <div class="d-flex align-items-center">
+                                    <h5><?=$row['answer1']?></h5><br>
                                 </div>
+                                <div class="d-flex align-items-center">
+                                    <h5><?=$row['answer2']?></h5><br>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <h5><?=$row['answer3']?></h5><br>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <h5><?=$row['answer4']?></h5><br>
+                                </div>
+                                
                             </div>
-                        </div>";
+                     
               
-                        }
+                        <?php endwhile; 
                         $conn->close();
                     ?>
+                    <div class="text-center">
+                    <a href="https://php/view/admin/test.view.php" class="btn btn-primary mb-5">Back</a>
+                    </div>
     </div>
 </body>
 </html> 
