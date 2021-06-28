@@ -24,7 +24,6 @@ class Test
     }
     public function addTest()
     {
-        var_dump($_REQUEST);
         $conn = mysqli_connect("localhost", "root", "root", "laravel");
         $table = $_REQUEST['table'];
         $question = $_REQUEST['question'];
