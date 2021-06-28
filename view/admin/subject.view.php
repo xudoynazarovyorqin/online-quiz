@@ -16,7 +16,7 @@
         <ul class=" nav flex-column text-center">
             <li class="my-3"><a class="text-decoration-none" href="./subject.view.php"><span class="text-uppercase">Subjects</span></a></li>
             <li class="mb-3"><a class="text-decoration-none" href="./test.view.php"><span class="text-uppercase">Tests</span></a></li>
-            <li class="mb-3"><a class="text-decoration-none" href="./results.view.php"><span class="text-uppercase">Students Result</span></a></li>
+            <li class="mb-3"><a class="text-decoration-none" href="./result.view.php"><span class="text-uppercase">Students Result</span></a></li>
         </ul>
     </div>
     <div style="margin-left:250px">
