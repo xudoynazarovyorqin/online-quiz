@@ -28,21 +28,21 @@
         <div class="form-group">
             <input type="text" name="question" class="form-control " placeholder="Question">
             <div class="form-group d-flex align-items-center">
-                <input type="radio" name="true" value="1">
-                <input type="text" name="answer1" class="form-control" placeholder="answer 1" >
+                <input type="radio" name="true" value="1" required >
+                <input type="text" name="answer1" class="form-control" placeholder="answer 1" required>
             </div>
             
             <div class="form-group d-flex align-items-center">
-                <input type="radio" name="true" value="2">
-                <input type="text" name="answer2" class="form-control" placeholder="answer 2" >
+                <input type="radio" name="true" value="2" required >
+                <input type="text" name="answer2" class="form-control" placeholder="answer 2" required>
             </div>
             <div class="form-group d-flex align-items-center">
-                <input type="radio" name="true" value="3">
-                <input type="text" name="answer3" class="form-control" placeholder="answer 3" >
+                <input type="radio" name="true" value="3" required >
+                <input type="text" name="answer3" class="form-control" placeholder="answer 3" required>
             </div>
             <div class="form-group d-flex align-items-center">
-                <input type="radio" name="true" value="4">
-                <input type="text" name="answer4" class="form-control" placeholder="answer 4" >
+                <input type="radio" name="true" value="4" required >
+                <input type="text" name="answer4" class="form-control" placeholder="answer 4" required>
             </div>
                 <input type="hidden" name="subject" value="<?=$_REQUEST['subject']?>">
                 

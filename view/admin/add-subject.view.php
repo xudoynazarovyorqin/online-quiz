@@ -21,7 +21,7 @@
             <h3 style="color:#0d6efd; font-family:sans-serif">Add Subject</h3>
         </div>
         <form action="../../controllers/admin/subject/add-subject.php" method="post">
-            <input type="text" name="subject_name" placeholder="Enter Subject Name" class="form-control">
+            <input type="text" name="subject_name" placeholder="Enter Subject Name" class="form-control" required>
             <div class="text-center">
                 <button type="submit" class="btn btn-primary m-3 px-3 mt-1">Add</button>
             </div>

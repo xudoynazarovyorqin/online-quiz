@@ -16,7 +16,7 @@
         <div class="vertical-center">
             <form action="../../controllers/students/begin.php" method="post">
             <!-- <small><p>Name</p></small> -->
-                <input type="text" name="user_name" placeholder="Your Name" class="form-control m-0 mb-2">
+                <input type="text" name="user_name" placeholder="Your Name" class="form-control m-0 mb-2" required>
                 <small><p class="m-0 p-0 ml-2">Enter Subject</p></small>
                 <select name="test" id="test" class="form-select">
                     <?php
